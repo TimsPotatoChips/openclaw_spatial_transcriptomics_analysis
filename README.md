@@ -266,6 +266,37 @@ openai>=1.0.0
 
 ---
 
+## Visualizations
+
+### Ensemble Clustering
+
+![Comprehensive Ensemble Clustering Analysis](docs/images/comprehensive_clustering_analysis.png)
+*Silhouette scores, cluster counts, execution time, and ensemble improvement across kmeans, DBSCAN, hierarchical, and Gaussian mixture methods.*
+
+![Method Diversity and Quality](docs/images/method_diversity_quality.png)
+*Method similarity (ARI) and quality metrics (Silhouette, Calinski-Harabasz, Davies-Bouldin) across clustering methods.*
+
+### Biological Annotation
+
+![Annotation Overview](docs/images/annotation_overview.png)
+*Cell type spatial distribution, proportions, assignment quality, confidence scores, and marker gene detection across 24,930 analyzed cells.*
+
+![Cell Type Assignments](docs/images/cell_type_assignments.png)
+*Spatial map of assigned cell types across the tissue section, including granulosa cells, oocytes, theca cells, stromal fibroblasts, and immune populations.*
+
+![Confidence Analysis](docs/images/confidence_analysis.png)
+*Spatial and distribution view of assignment confidence scores.*
+
+### Anatomical & Spatial Structure
+
+![Anatomical Structures](docs/images/anatomical_structures.png)
+*Identified anatomical structures including primordial, primary, secondary, and antral follicles, and corpus luteum structures.*
+
+![Spatial Organization](docs/images/spatial_organization.png)
+*Local cell density map and cell type centroids across the tissue.*
+
+---
+
 ## License
 
 CS298 Enhanced Framework - Academic Use Only
