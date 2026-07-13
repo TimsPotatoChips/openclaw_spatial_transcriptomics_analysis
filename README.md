@@ -1,4 +1,4 @@
-# CS298 Enhanced Spatial Transcriptomics Analysis Pipeline
+# Enhanced Spatial Transcriptomics Analysis Pipeline
 
 ---
 
@@ -10,7 +10,7 @@ This pipeline processes Stereo-seq spatial transcriptomics data through the foll
 FASTQ Files → SAW Processing → GEF File → Analysis → Results
 ```
 
-**CS298 Framework Components:**
+**Spatial Transcriptomics Analysis Framework Components:**
 1. **Baseline** - Baseline results
 2. **Ensemble Clustering** - Ensemble clustering result
 3. **Biological Annotation** - Cell type identification with 248 markers
@@ -21,11 +21,11 @@ FASTQ Files → SAW Processing → GEF File → Analysis → Results
 
 ## Installation
 
-### 1. Clone CS298 Code
+### 1. Clone Spatial Transcriptomics Analysis Code
 
 ```bash
-mkdir CS298_Project
-cd CS298_Project
+mkdir Spatial_Transcriptomics_Analysis_Project
+cd Spatial_Transcriptomics_Analysis_Project
 
 # Place your 5 Python files here:
 # - ai_agent.py
@@ -51,10 +51,10 @@ cd SAW
 
 ```bash
 # Create virtual environment
-python -m venv cs298_env
-source cs298_env/bin/activate  # Linux/Mac
+python -m venv spatial_transcriptomics_analysis_env
+source spatial_transcriptomics_analysis_env/bin/activate  # Linux/Mac
 # OR
-cs298_env\Scripts\activate  # Windows
+spatial_transcriptomics_analysis_env\Scripts\activate  # Windows
 
 # Install required packages
 pip install numpy pandas scipy scikit-learn h5py matplotlib seaborn openai
@@ -155,7 +155,7 @@ GEF file link for mouse ovarian tissue (for SJSU account): https://drive.google.
 
 ---
 
-### Step 3: Run CS298 Analysis
+### Step 3: Run Spatial Transcriptomics Analysis
 
 #### 3.1 Update File Paths
 
@@ -217,7 +217,7 @@ python ai_agent.py
 ## Project Structure
 
 ```
-CS298_Project/
+Spatial_Transcriptomics_Analysis_Project/
 ├── README.md                          # This file        
 │
 ├── input_data/
@@ -252,7 +252,7 @@ openai>=1.0.0
 
 ## Expected Results Summary (number might change slightly for each run)
 
-### CS298 Framework Performance:
+### Spatial Transcriptomics Analysis Framework Performance:
 
 | Component | Metric | Value | vs. Baseline |
 |-----------|--------|-------|--------------|
@@ -297,8 +297,28 @@ openai>=1.0.0
 
 ---
 
+## AI Agent: How It Thinks (Example Hypotheses)
+
+The AI agent doesn't just cluster cells — it proposes an idea about the biology, tests it statistically, and then explains what the result might mean, in plain language. Two examples of what this looks like in practice:
+
+**Example 1: Cell subpopulations**
+
+- *Hypothesis generated:* "Cells cluster into transcriptionally distinct groups that may represent different cell types or states."
+- *What the agent did:* Ran PCA + K-means clustering and checked how well-separated the resulting groups were (silhouette score ≈ 0.40, high confidence).
+- *Biological explanation:* This pattern is consistent with the tissue containing several different, specialized cell types — for example granulosa cells, theca cells, and oocytes in an ovarian follicle — each with its own distinct gene activity "fingerprint" rather than one uniform cell population.
+
+**Example 2: Localized anomaly / signaling dysregulation**
+
+- *Hypothesis generated:* "The detected anomaly in the dataset corresponds to a localized dysregulation of a specific signalling pathway that drives aberrant cellular behaviour in a subset of cells."
+- *What the agent did:* Flagged a small group of cells whose expression didn't match the surrounding tissue, then ran anomaly detection and characterization on that subset.
+- *Biological explanation:* A handful of cells are behaving differently from their neighbors, which could point to a signaling pathway (the chemical messages cells use to coordinate) switching on or off abnormally in that spot — for instance, in a follicle undergoing degeneration or a region responding to local stress.
+
+In short: the **Hypothesis Generator** proposes the "what if," the **Analysis Planner/Executor** tests it with the right statistics, and the **Result Interpreter** translates the numbers back into a biological story a reader can follow.
+
+---
+
 ## License
 
-CS298 Enhanced Framework - Academic Use Only
+Spatial Transcriptomics Analysis Enhanced Framework - Academic Use Only
 
 SAW - Check STOmics repository for license details
