@@ -322,3 +322,15 @@ In short: the **Hypothesis Generator** proposes the "what if," the **Analysis Pl
 Spatial Transcriptomics Analysis Enhanced Framework - Academic Use Only
 
 SAW - Check STOmics repository for license details
+
+---
+
+For instructions on how to install an AI agent for automatic running of the pipeline and generating and testing hypotheses, please see [AI_AGENT_DEPLOY.md](AI_AGENT_DEPLOY.md).
+
+## Based On
+
+Maiqi Zhang, *Enhanced Autonomous Spatial Transcriptomics Analysis*, MS Thesis, San Jose State University, 2026. Advisor: Dr. William B. Andreopoulos.
+
+---
+
+This file was written and maintained by Minjun Roe.
