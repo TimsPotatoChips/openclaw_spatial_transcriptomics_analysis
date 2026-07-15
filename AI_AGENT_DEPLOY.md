@@ -20,6 +20,8 @@ The pipeline runs three stages in sequence:
 - An Anthropic or OpenAI API key
 - A Gmail account (for email notifications)
 
+> **Note:** This pipeline was tested using OpenClaw with **Claude (Anthropic)** as the AI provider, not with a local model runner such as Ollama. We recommend using an Anthropic API key with OpenClaw for the most reliable results.
+
 ## Installation
 
 ### 1. Clone the Repository
@@ -50,7 +52,7 @@ openclaw onboard --install-daemon
 ```
 
 During setup:
-- Select your AI provider (Anthropic recommended if you have a Claude subscription)
+- Select your AI provider — **Anthropic (Claude) is what this pipeline was tested with**; other providers (e.g. Ollama) are not guaranteed to work the same way
 - Select **ClickClack** as the channel to use the browser dashboard
 - Skip optional skills and search providers
 
